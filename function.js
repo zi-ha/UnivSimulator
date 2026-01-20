@@ -22,168 +22,62 @@ function initializePlayerBuild(currentPlayer, giftstr1, giftstr2) {
     let fl = 0;
     let fu = 10;
     currentPlayer.money = 0;
-    //通关特典giftExam，涉及期末考试相关计算。由于作为玩家属性的examBase每学期都被置零，这里不做修改。在期末考试部分做修改。此处只设置一个flag。
-    if (giftstr1 === giftExam || giftstr2 === giftExam) {
-        flagJuanWang = true;
-    }
-    switch(giftstr1) {
-        case giftAttr1: {
-            wl += 2;
-            il += 2;
-            hl += 2;
-            fl += 2;
-            break;
+    
+    //使用循环处理两个特典，避免代码重复
+    const gifts = [giftstr1, giftstr2];
+    gifts.forEach(gift => {
+        if (gift === giftExam) {
+            flagJuanWang = true;
         }
-        case giftLuck1: {
-            currentPlayer.luck += 2;
-            break;
+        switch(gift) {
+            case giftAttr1: 
+                wl += 2; il += 2; hl += 2; fl += 2; break;
+            case giftLuck1: 
+                currentPlayer.luck += 2; break;
+            case giftBattle1: 
+                currentPlayer.battle += 2; break;
+            case giftInt1: 
+                il += 6; break;
+            case giftHor1: 
+                hl += 6; break;
+            case giftFin1: 
+                fl += 6; break;
+            case giftWea1: 
+                wl += 6; break;
+            case giftAttr2: 
+                wl += 4; il += 4; hl += 4; fl += 4; break;
+            case giftLuck2: 
+                currentPlayer.luck += 5; break;
+            case giftBattle2: 
+                currentPlayer.battle += 5; break;
+            case giftWeaex: 
+                //平衡调整：Wealth +8, Battle +4, Int Upper -5
+                wl += 8; currentPlayer.battle += 4; iu -= 5; break;
+            case giftMoney: 
+                //平衡调整：Money +15000
+                wu -= 7; currentPlayer.money += 15000; break;
+            case giftAttr3: 
+                //平衡调整：All Lower +5
+                wl += 5; il += 5; hl += 5; fl += 5; break;
+            case giftExceed: 
+                //平衡调整：All Upper +5
+                wu += 5; iu += 5; hu += 5; fu += 5; break;
+            case giftLuck3: 
+                //平衡调整：Luck +8
+                currentPlayer.luck += 8; break;
+            //新增特典逻辑
+            case giftSocial:
+                hl += 4; fl += 2; break;
+            case giftWenWu:
+                il += 3; currentPlayer.battle += 3; break;
+            case giftInvest:
+                fl += 5; currentPlayer.money += 5000; break;
+            case giftDestiny:
+                currentPlayer.luck += 4; wl += 2; il += 2; hl += 2; fl += 2; break;
+            default:
+                break;
         }
-        case giftBattle1: {
-            currentPlayer.battle += 2;
-            break;
-        }
-        case giftInt1: {
-            il += 6;
-            break;
-        }
-        case giftHor1: {
-            hl += 6;
-            break;
-        }
-        case giftFin1: {
-            fl += 6;
-            break;
-        }
-        case giftWea1: {
-            wl += 6;
-            break;
-        }
-        case giftAttr2: {
-            wl += 4;
-            il += 4;
-            hl += 4;
-            fl += 4;
-            break;
-        }
-        case giftLuck2: {
-            currentPlayer.luck += 5;
-            break;
-        }
-        case giftBattle2: {
-            currentPlayer.battle += 5;
-            break;
-        }
-        case giftWeaex: {
-            wl += 10;
-            currentPlayer.battle += 5;
-            iu -= 8;
-            break;
-        }
-        case giftMoney: {
-            wu -= 7;
-            currentPlayer.money += 25000;
-            break;
-        }
-        case giftAttr3: {
-            wl += 6;
-            il += 6;
-            hl += 6;
-            fl += 6;
-            break;
-        }
-        case giftExceed: {
-            wu += 7;
-            iu += 7;
-            hu += 7;
-            fu += 7;
-            break;
-        }
-        case giftLuck3: {
-            currentPlayer.luck += 12;
-            break;
-        }
-        default:
-            break;
-    }
-    switch(giftstr2) {
-        case giftAttr1: {
-            wl += 2;
-            il += 2;
-            hl += 2;
-            fl += 2;
-            break;
-        }
-        case giftLuck1: {
-            currentPlayer.luck += 2;
-            break;
-        }
-        case giftBattle1: {
-            currentPlayer.battle += 2;
-            break;
-        }
-        case giftInt1: {
-            il += 6;
-            break;
-        }
-        case giftHor1: {
-            hl += 6;
-            break;
-        }
-        case giftFin1: {
-            fl += 6;
-            break;
-        }
-        case giftWea1: {
-            wl += 6;
-            break;
-        }
-        case giftAttr2: {
-            wl += 4;
-            il += 4;
-            hl += 4;
-            fl += 4;
-            break;
-        }
-        case giftLuck2: {
-            currentPlayer.luck += 5;
-            break;
-        }
-        case giftBattle2: {
-            currentPlayer.battle += 5;
-            break;
-        }
-        case giftWeaex: {
-            wl += 10;
-            currentPlayer.battle += 5;
-            iu -= 8;
-            break;
-        }
-        case giftMoney: {
-            wu -= 7;
-            currentPlayer.money += 25000;
-            break;
-        }
-        case giftAttr3: {
-            wl += 6;
-            il += 6;
-            hl += 6;
-            fl += 6;
-            break;
-        }
-        case giftExceed: {
-            wu += 7;
-            iu += 7;
-            hu += 7;
-            fu += 7;
-            break;
-        }
-        case giftLuck3: {
-            currentPlayer.luck += 12;
-            break;
-        }
-        default:
-            break;
-    }
+    });
 
     currentPlayer.wealth = getRandomInteger(wl, wu);
     currentPlayer.intelligence = getRandomInteger(il, iu);
@@ -1047,12 +941,16 @@ function gift2SpanClassname (giftstr) {
         case giftAttr2:
         case giftLuck2:
         case giftBattle2:
+        case giftSocial:
+        case giftWenWu:
         return "gift-rating-C";
         case giftWeaex:
         case giftMoney:
         case giftExam:
+        case giftInvest:
         return "gift-rating-B";
         case giftAttr3:
+        case giftDestiny:
         return "gift-rating-A";
         case giftExceed:
         case giftLuck3:

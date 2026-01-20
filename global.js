@@ -140,6 +140,19 @@ const giftWea1 = "全面脱贫";
 const giftWea1des = "（家境随机下限+6）";
 const DrankGiftTexts = [giftAttr1, giftLuck1, giftBattle1, giftInt1, giftHor1, giftFin1, giftWea1, giftLowrank, giftLowrank, giftLowrank];
 const DrankGiftDess = [giftAttr1des, giftLuck1des, giftBattle1des, giftInt1des, giftHor1des, giftFin1des, giftWea1des, giftemptystr, giftemptystr, giftemptystr];
+
+const giftExam = "卷王";
+const giftExamdes = "（大幅提升期末考试成绩）";
+//新增特典
+const giftSocial = "社交达人";
+const giftSocialdes = "（眼界随机下限+4，财商随机下限+2）";
+const giftWenWu = "文武双全";
+const giftWenWudes = "（智力随机下限+3，战斗力+3）";
+const giftInvest = "投资奇才";
+const giftInvestdes = "（财商随机下限+5，初始金钱+5000）";
+const giftDestiny = "天命之子";
+const giftDestinydes = "（幸运值+4，全属性随机下限+2）";
+
 //C评价
 const GIFT_C_RANK = 7;
 const giftAttr2 = "贵族圆环";
@@ -148,32 +161,30 @@ const giftLuck2 = "空灵吊坠";
 const giftLuck2des = "（幸运值+5）";
 const giftBattle2 = "攻击之爪";
 const giftBattle2des = "（战斗力+5）";
-const CrankGiftTexts = [giftAttr1, giftLuck1, giftBattle1, giftInt1, giftHor1, giftFin1, giftWea1, giftAttr2, giftLuck2, giftBattle2];
-const CrankGiftDess = [giftAttr1des, giftLuck1des, giftBattle1des, giftInt1des, giftHor1des, giftFin1des, giftWea1des, giftAttr2des, giftLuck2des, giftBattle2des];
+const CrankGiftTexts = [giftInt1, giftHor1, giftFin1, giftWea1, giftAttr2, giftLuck2, giftBattle2, giftSocial, giftWenWu];
+const CrankGiftDess = [giftInt1des, giftHor1des, giftFin1des, giftWea1des, giftAttr2des, giftLuck2des, giftBattle2des, giftSocialdes, giftWenWudes];
 //B评价
 const GIFT_B_RANK = 8;
 const giftWeaex = "地主家的傻儿子";
-const giftWeaexdes = "（家境拉满、战斗力+5，智力随机上限-8）";
+const giftWeaexdes = "（家境随机下限+8，战斗力+4，智力随机上限-5）";
 const giftMoney = "暴发户";
-const giftMoneydes = "（家境贫困，但开局金钱+25000）";
-const giftExam = "卷王";
-const giftExamdes = "（大幅提升期末考试成绩）";
-const BrankGiftTexts = [giftInt1, giftHor1, giftFin1, giftWea1, giftAttr2, giftLuck2, giftBattle2, giftWeaex, giftMoney, giftExam];
-const BrankGiftDess = [giftInt1des, giftHor1des, giftFin1des, giftWea1des, giftAttr2des, giftLuck2des, giftBattle2des, giftWeaexdes, giftMoneydes, giftExamdes];
+const giftMoneydes = "（家境贫困，但开局金钱+15000）";
+const BrankGiftTexts = [giftAttr2, giftLuck2, giftBattle2, giftSocial, giftWenWu, giftWeaex, giftMoney, giftExam, giftInvest];
+const BrankGiftDess = [giftAttr2des, giftLuck2des, giftBattle2des, giftSocialdes, giftWenWudes, giftWeaexdes, giftMoneydes, giftExamdes, giftInvestdes];
 //A评价
 const GIFT_A_RANK = 9;
 const giftAttr3 = "国王头冠";
-const giftAttr3des = "（全属性随机下限+6）";
-const ArankGiftTexts = [giftInt1, giftHor1, giftFin1, giftAttr2, giftLuck2, giftBattle2, giftWeaex, giftMoney, giftExam, giftAttr3];
-const ArankGiftDess = [giftInt1des, giftHor1des, giftFin1des, giftAttr2des, giftLuck2des, giftBattle2des, giftWeaexdes, giftMoneydes, giftExamdes, giftAttr3des];
+const giftAttr3des = "（全属性随机下限+5）";
+const ArankGiftTexts = [giftWeaex, giftMoney, giftExam, giftInvest, giftSocial, giftWenWu, giftAttr3, giftDestiny, giftAttr2, giftLuck2];
+const ArankGiftDess = [giftWeaexdes, giftMoneydes, giftExamdes, giftInvestdes, giftSocialdes, giftWenWudes, giftAttr3des, giftDestinydes, giftAttr2des, giftLuck2des];
 //S评价
 const GIFT_S_RANK = 10;
 const giftExceed = "超越极限";
-const giftExceeddes = "（全属性随机上限+7）";
+const giftExceeddes = "（全属性随机上限+5）";
 const giftLuck3 = "幸运女神的庇佑";
-const giftLuck3des = "（幸运值+12）";
-const SrankGiftTexts = [giftHor1, giftAttr2, giftLuck2, giftBattle2, giftWeaex, giftMoney, giftExam, giftAttr3, giftExceed, giftLuck3];
-const SrankGiftDess = [giftHor1des, giftAttr2des, giftLuck2des, giftBattle2des, giftWeaexdes, giftMoneydes, giftExamdes, giftAttr3des, giftExceeddes, giftLuck3des];
+const giftLuck3des = "（幸运值+8）";
+const SrankGiftTexts = [giftAttr3, giftDestiny, giftExceed, giftLuck3, giftWeaex, giftMoney, giftExam, giftInvest, giftSocial, giftWenWu];
+const SrankGiftDess = [giftAttr3des, giftDestinydes, giftExceeddes, giftLuck3des, giftWeaexdes, giftMoneydes, giftExamdes, giftInvestdes, giftSocialdes, giftWenWudes];
 
 //结局的评价等级
 const S_END_RANK = 10;
