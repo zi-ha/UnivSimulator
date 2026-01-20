@@ -380,11 +380,10 @@ const specialEventList = {
         if (a > 50 + player.risk - player.luck) {
             let b = getRandomInteger(0, 200);
             if (b < player.risk) {
-                let c = getRandomInteger(0, 4); //随机事件列表都是五个五个一组
+                let c = getRandomInteger(0, vbadSeventList.length - 1);
                 return vbadSeventList[c];
             } else {
-                let c = getRandomInteger(0, 4);
-                //大四下学期不发生绩点相关事件
+                let c = getRandomInteger(0, badSeventList.length - 1);
                 if (badSeventList[c] === seventKeGai && player.semester === 8) {
                     lunwenBase -= 10;
                     return seventKeGaiDasi;
@@ -394,16 +393,15 @@ const specialEventList = {
         } else {
             let b = getRandomInteger(0, 100);
             if (b < player.luck) {
-                let c = getRandomInteger(0, 4);
-                //大四下学期不发生绩点相关事件
-                if (player.semester === 8 && c === 0) {
-                    let d = getRandomInteger(1, 4);
-                    return vgoodSeventList[d];
+                let c = getRandomInteger(0, vgoodSeventList.length - 1);
+                if (player.semester === 8 && vgoodSeventList[c] === seventManJi) {
+                    let candidates = vgoodSeventList.filter((ev) => ev !== seventManJi);
+                    let d = getRandomInteger(0, candidates.length - 1);
+                    return candidates[d];
                 }
                 return vgoodSeventList[c];
             } else {
-                let c = getRandomInteger(0, 4);
-                //大四下学期不发生绩点相关事件
+                let c = getRandomInteger(0, goodSeventList.length - 1);
                 if (goodSeventList[c] === seventShiJuan && player.semester === 8) {
                     lunwenBase += 20;
                     return seventShiJuanDasi;
@@ -502,7 +500,7 @@ const schoolTodoList = {
 
         schoolTodoList.cplayer = player;
 
-        if (schoolTodoList.cplayer.round > 2 && schoolTodoList.cplayer.semester === 8 && !jobpageDone) {
+        if (schoolTodoList.cplayer.round > 4 && schoolTodoList.cplayer.semester === 8 && !jobpageDone) {
             if (flagQiuzhi) {
                 //跳转特殊事件找工作界面
                 schoolTodoList.div.style.display = "none";
@@ -514,7 +512,7 @@ const schoolTodoList = {
 
         
         //每学期可以做三次规划。拟通过player的属性控制
-        if (schoolTodoList.cplayer.round > 2) {
+        if (schoolTodoList.cplayer.round > 4) {
             schoolTodoList.cplayer.round = 0;
             schoolTodoList.div.style.display = "none";
             transPage.showDiv();
@@ -538,7 +536,7 @@ const schoolTodoList = {
         schoolTodoList.button4.disabled = false;
         schoolTodoList.button5.disabled = false;
 
-        schoolTodoList.title.textContent = "接下来要做什么？（本学期第" + (schoolTodoList.cplayer.round + 1).toString() + "/3次规划）"; 
+        schoolTodoList.title.textContent = "接下来要做什么？（本学期第" + (schoolTodoList.cplayer.round + 1).toString() + "/5次规划）"; 
 
         schoolTodoList.div.style.display = "flex";
 

@@ -251,7 +251,8 @@ function selectRandomPlans(plansArray, count) {
 //该函数返回一个数组。数组每个元素都是0-100的整数，代表考试成绩。数组长度代表一共考多少门课。
 function calFinalExam(inte, base, univ, eNum, luck) {
     //分数取值范围在0-100，相关属性提高随机下限。
-    let lLimit = base + luck + inte * 6 + 10 * univ.tier;
+    //降低智力权重（6->3）和学校档次加成（10->5），增加拿高分的难度
+    let lLimit = base + luck + inte * 4 + 7 * univ.tier;
 
     let final = [];
     //对每门课分别做判定

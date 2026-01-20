@@ -1,5 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background-color: #eef2f7;
+    color: #1f2937;
+    line-height: 1.6;
 }
 
 ul li {
@@ -23,7 +26,7 @@ ul li {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
   padding: 20px;
 }
 
@@ -43,7 +46,8 @@ ul li {
 
 .wbutton {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #2f6df6;
+  border: none;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -51,6 +55,12 @@ ul li {
   font-size: 2em;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.wbutton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47, 109, 246, 0.35);
 }
 
 
@@ -64,7 +74,7 @@ ul li {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
   padding: 20px;
 }
 
@@ -108,7 +118,8 @@ ul li {
 
 .major-button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #2f6df6;
+  border: none;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -117,6 +128,12 @@ ul li {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 20px; 
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.major-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47, 109, 246, 0.35);
 }
 
 /*填志愿页设置*/
@@ -128,7 +145,7 @@ ul li {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
   padding: 20px;
 }
 
@@ -140,6 +157,8 @@ ul li {
 .apply-container {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  width: min(760px, 90vw);
 }
 
 .apply-univname {
@@ -154,16 +173,22 @@ ul li {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-  background-color: rgb(242, 241, 233);
-  border: 1px solid rgb(200, 233, 245); /* 普通的边框 */
-  border-width: 2px; /* 边框宽度 */
-  border-style: solid; /* 边框样式 */
-  border-radius: 5px; /* 边框圆角 */
+  background-color: #ffffff;
+  border: 1px solid #d8e2f1;
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .apply-univcontainer.done {
-  background-color: lightblue;
-  border-color: red;
+  background-color: #e8f0ff;
+  border-color: #2f6df6;
+}
+.apply-univcontainer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  border-color: #bcd0f5;
 }
 
 
@@ -193,7 +218,8 @@ ul li {
 
 .apply-button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #2f6df6;
+  border: none;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -202,6 +228,12 @@ ul li {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 20px; 
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.apply-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47, 109, 246, 0.35);
 }
 
 /*录取页设置*/
@@ -213,7 +245,7 @@ ul li {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
   padding: 20px;
 }
 
@@ -229,7 +261,8 @@ ul li {
 
 .admission-button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #2f6df6;
+  border: none;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -237,6 +270,12 @@ ul li {
   font-size: 1em;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.admission-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47, 109, 246, 0.35);
 }
 
 
@@ -248,16 +287,18 @@ ul li {
 .mTitle {
     text-align: center;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
 }
 
 .statusBar {
     overflow: hidden;
-    background-color: #333;
+    background: linear-gradient(90deg, #1f2937 0%, #2f3b52 100%);
     text-align: center;
     padding: 30px;
 	position: sticky;
 	top: 0;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
 }
 
 .status-span {
@@ -284,11 +325,13 @@ ul li {
 
 .sidebar {
     width: 100%;  /*显示在小屏幕上时为100%宽度*/
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding: 15px;
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
 }
 
 .ccontainer {
@@ -299,6 +342,7 @@ ul li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
 }
 
 /* 媒体查询：当屏幕宽度大于600px时，应用以下样式 */
@@ -320,11 +364,15 @@ ul li {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  width: min(720px, 90vw);
 }
 
 .splan-title {
   font-size: 1.4em;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .splan-buttonbox {
@@ -334,20 +382,34 @@ ul li {
   flex-direction: column;
   font-size: 1em;
   margin-bottom: 15px;
-  background-color: #333;
-  color: white;
+  background-color: #ffffff;
+  color: #1f2937;
   text-align: center;
+  border: 1px solid #e1e8f5;
+  border-radius: 10px;
+  padding: 12px 10px;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
 }
 
 .splan-button {
-  width:75%;
-  padding: 5px 5px;
+  width: 80%;
+  padding: 8px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
+  background-color: #2f6df6;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  margin-bottom: 8px;
+}
+.splan-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 109, 246, 0.3);
 }
 
 /* 特殊事件界面 */
@@ -358,6 +420,10 @@ ul li {
   text-align: center;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  width: min(720px, 90vw);
 }
 
 .sevent-title {
@@ -369,22 +435,24 @@ ul li {
   padding: 15px;
   font-size: 1.3em;
   margin-bottom: 40px;
-  background-color: #f1f1f1;
-  width: 50%;
+  background-color: #f5f7fb;
+  width: min(520px, 80vw);
   text-align: center;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .sevent-para2 {
-  background-color: #f1f1f1;
-  width: 50%;
+  background-color: #f5f7fb;
+  width: min(520px, 80vw);
   padding: 10px;
   text-align: center;
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
   line-height: 150%;
+  border-radius: 10px;
 }
 
 .sevent-button {
@@ -396,6 +464,15 @@ ul li {
   display: inline-block;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
+  background-color: #2f6df6;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.sevent-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 109, 246, 0.3);
 }
 
 /* 转场页  */
@@ -421,7 +498,10 @@ ul li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  width: min(720px, 90vw);
 }
 
 .exam-title {
@@ -444,6 +524,15 @@ ul li {
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
+  background-color: #2f6df6;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.exam-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 109, 246, 0.3);
 }
 
 /* 假期事件页 */
@@ -454,6 +543,10 @@ ul li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  width: min(720px, 90vw);
 }
 
 .vacation-title {
@@ -476,6 +569,15 @@ ul li {
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
+  background-color: #2f6df6;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.vacation-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 109, 246, 0.3);
 }
 
 /* 补考页 */
@@ -486,6 +588,10 @@ ul li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  width: min(720px, 90vw);
 }
 
 .resit-title {
@@ -504,6 +610,15 @@ ul li {
   font-size: 1em;
   cursor: pointer;
   border-radius: 5px;
+  border: none;
+  background-color: #2f6df6;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.resit-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 109, 246, 0.3);
 }
 
 
@@ -520,7 +635,10 @@ ul li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  width: min(720px, 90vw);
 }
 
 .yearr-title {
@@ -538,7 +656,15 @@ ul li {
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 5px;
-  background-color: lightgray;
+  border: none;
+  background-color: #2f6df6;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.yearr-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 109, 246, 0.3);
 }
 
 
@@ -554,7 +680,7 @@ ul li {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
   padding: 20px;
 }
 
@@ -577,7 +703,8 @@ ul li {
 .gameover-button {
   margin-top: 30px;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #2f6df6;
+  border: none;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -585,6 +712,12 @@ ul li {
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.gameover-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47, 109, 246, 0.35);
 }
 
 
@@ -599,7 +732,7 @@ ul li {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
   padding: 20px;
 }
 
@@ -623,7 +756,8 @@ ul li {
 
 .enddata-button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #2f6df6;
+  border: none;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -631,6 +765,12 @@ ul li {
   font-size: 1.2em;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.enddata-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47, 109, 246, 0.35);
 }
 
 
@@ -693,7 +833,7 @@ ul li {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #f7f7f7;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
   padding: 20px;
 }
 
@@ -736,22 +876,22 @@ ul li {
 
 .gift-item {
   padding:10px;
-  background: #9f9e9e;
+  background: #ffffff;
   margin-bottom: 10px;
-  border: 1px solid rgb(200, 233, 245); /* 普通的边框 */
-  border-width: 2px; /* 边框宽度 */
-  border-style: solid; /* 边框样式 */
-  border-radius: 5px; /* 边框圆角 */
+  border: 1px solid #d8e2f1;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
 }
 
 .gift-item.done {
-  background: #5691ff;
-  border-color: red;
+  background: #e8f0ff;
+  border-color: #2f6df6;
 }
 
 .gift-button {
   padding: 10px;
-  background-color: #333;
+  background-color: #2f6df6;
+  border: none;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -759,4 +899,10 @@ ul li {
   font-size: 1em;
   cursor: pointer;
   border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(47, 109, 246, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.gift-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(47, 109, 246, 0.35);
 }
