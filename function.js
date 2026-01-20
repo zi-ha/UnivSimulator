@@ -252,7 +252,8 @@ function selectRandomPlans(plansArray, count) {
 function calFinalExam(inte, base, univ, eNum, luck) {
     //分数取值范围在0-100，相关属性提高随机下限。
     //降低智力权重（6->3）和学校档次加成（10->5），增加拿高分的难度
-    let lLimit = base + luck + inte * 4 + 7 * univ.tier;
+    //提高复习（base）的收益权重，增加基础分（+10），降低挂科率
+    let lLimit = Math.floor(base * 1.2) + luck + inte * 4 + 7 * univ.tier + 3;
 
     let final = [];
     //对每门课分别做判定
@@ -265,7 +266,7 @@ function calFinalExam(inte, base, univ, eNum, luck) {
             result = getRandomInteger(lLimit, 100);
         }
         //根据学校的竞争激烈度，对最终分数做调整
-        result -= 2 * univ.pressure;
+        result -= 1.5 * univ.pressure;
         //负数的情况下，调整为0分。
         if (result < 0) {
             result = 0;
